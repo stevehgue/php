@@ -7,14 +7,9 @@ if(isset($_POST['submit'])) {
     $image = $_FILES["myimage"];
     $imagename = "Images/" . $image["name"];
 
-    $target_dir = "Images/";
-    $target_file = $target_dir . basename($image["name"]);
-
-    move_uploaded_file($image["tmp_name"], $target_file);
-
-
     $insert_image = $bdd->prepare("insert into produit(nom, prix, photo) values(?,?,?)");
     $insert_image->execute(array($nom, $prix, $imagename));
+    header('Location: test.php');
 
   } else {
     echo "les valeures sont vides";
@@ -41,4 +36,5 @@ if(isset($_POST['submit'])) {
   <button type="submit" class="btn btn-primary" name = "submit">Submit</button>
 </form>
 
-<?php include('footer.php'); ?>
+<?php include('footer.php');
+?>

@@ -21,7 +21,7 @@ if(isset($_GET['choix'])) {
           <p class="card-text"><?= $produit->prix ?></p>
           <a href = "test.php?choix=<?= $produit->id ?>"><button type="button" class="btn btn-primary">Supprimer</button></a>
           <a href = "modifier.php?choix=<?= $produit->id?>"><button type "button" class="btn btn-primary">Modifier</button></a>
-          <a href = "panier.php?choix=<?= $produit->id?>"<button type "button" class="btn btn-primary">Ajouter au panier</button></a>
+          <a href = "panier.php?choix=<?= $produit->id?>"><button type "button" class="btn btn-primary">Ajouter au panier</button></a>
         </div>
       </div>
     </div>
